@@ -1699,6 +1699,16 @@
         "type": "JSON",
         "header": "Takeout Hours - Sunday Closed",
         "path": "moreHours[?hoursTypeId\u003d\u003d\u0027TAKEOUT\u0027]"
+      },
+      {
+        "type": "JSON",
+        "header": "Primary Category ID for Override",
+        "path": "categories.primaryCategory.name"
+      },
+      {
+        "type": "JSON",
+        "header": "Secondary Category IDs for Override",
+        "path": "categories.additionalCategories[].name"
       }
     ]
   },
@@ -2601,6 +2611,45 @@
             "value": "accepts_new_patients:false,",
             "ignoreCase": false
           }
+        },
+        "replacement": ""
+      }
+    },
+    {
+      "mergeColumns": {
+        "inputHeaders": [
+          "Primary Category ID for Override",
+          "Secondary Category IDs for Override"
+        ],
+        "newColumnHeader": "Categories for GBP Override",
+        "delimiter": ","
+      }
+    },
+    {
+      "findAndReplace": {
+        "inputHeaders": {
+          "headers": [
+            "Categories for GBP Override"
+          ]
+        },
+        "valueToFind": {
+          "plainText": {
+            "value": "categories/",
+            "ignoreCase": false
+          }
+        },
+        "replacement": ""
+      }
+    },
+    {
+      "findAndReplace": {
+        "inputHeaders": {
+          "headers": [
+            "Categories for GBP Override"
+          ]
+        },
+        "valueToFind": {
+          "regex": ",\\Z"
         },
         "replacement": ""
       }
@@ -6762,6 +6811,15 @@
         },
         {
           "name": "isClosed"
+        }
+      ]
+    },
+    {
+      "field": "categories",
+      "header": "Categories for GBP Override",
+      "subfieldPath": [
+        {
+          "name": "googleBusinessProfile"
         }
       ]
     }

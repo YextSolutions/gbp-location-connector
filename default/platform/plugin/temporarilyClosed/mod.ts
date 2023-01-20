@@ -17,9 +17,3 @@ export async function temporarilyClosed(openInfo: string) : string {
     }
 
 }
-
-
-
-
-
-//{"status":"CLOSED_PERMANENTLY","canReopen":true,"openingDate":{"year":2018,"month":8,"day":12}}

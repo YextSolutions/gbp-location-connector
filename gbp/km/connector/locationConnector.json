@@ -6385,11 +6385,6 @@
       ]
     },
     {
-      "field": "googleAccountId",
-      "header": "External Listings ID",
-      "subfieldPath": []
-    },
-    {
       "field": "photoGallery",
       "header": "Photo Gallery",
       "subfieldPath": [

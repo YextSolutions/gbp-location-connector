@@ -1711,6 +1711,11 @@
                 "type": "JSON",
                 "header": "Secondary Category IDs for Override",
                 "path": "categories.additionalCategories[].name"
+            },
+            {
+                "type": "JSON",
+                "header": Google Maps Link",
+                "path": "metadata.mapsUri"
             }
         ]
     },

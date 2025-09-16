@@ -2660,6 +2660,20 @@
                 },
                 "replacement": ""
             }
+        },
+        {
+          "extractText": {
+            "inputHeader": "Google Maps Link",
+            "newColumnHeader": "Google CID",
+            "extractOperation": "ALL_TEXT_AFTER",
+            "extractFrom": "FIRST_INSTANCE_MATCHING_TEXT",
+            "valueToFind": {
+              "plainText": {
+                "value": "cid\u003d",
+                "ignoreCase": false
+              }
+            }
+          }
         }
     ],
     "mappings": [
@@ -6824,6 +6838,11 @@
                     "name": "googleBusinessProfile"
                 }
             ]
+        },
+        {
+            "field": "googleCid",
+            "header": "Google CID",
+            "subfieldPath": []
         }
     ],
     "comprehensiveModeConfig": {

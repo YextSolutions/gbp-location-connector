@@ -1714,7 +1714,7 @@
             },
             {
                 "type": "JSON",
-                "header": Google Maps Link",
+                "header": "Google Maps Link",
                 "path": "metadata.mapsUri"
             }
         ]

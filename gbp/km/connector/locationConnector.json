@@ -1716,6 +1716,51 @@
                 "type": "JSON",
                 "header": "Google Maps Link",
                 "path": "metadata.mapsUri"
+            },
+            {
+                "type": "JSON",
+                "header": "Facebook Page URL",
+                "path": "attributes[?contains(name, \u0027facebook\u0027)].uriValues[].uri"
+            },
+            {
+                "type": "JSON",
+                "header": "Instagram Handle",
+                "path": "attributes[?contains(name, \u0027instagram\u0027)].uriValues[].uri"
+            },
+            {
+                "type": "JSON",
+                "header": "Linkedin URL",
+                "path": "attributes[?contains(name, \u0027linkedin\u0027)].uriValues[].uri"
+            },
+            {
+                "type": "JSON",
+                "header": "Pinterest URL",
+                "path": "attributes[?contains(name, \u0027pinterest\u0027)].uriValues[].uri"
+            },
+            {
+                "type": "JSON",
+                "header": "TikTok URL",
+                "path": "attributes[?contains(name, \u0027tiktok\u0027)].uriValues[].uri"
+            },
+            {
+                "type": "JSON",
+                "header": "X Handle",
+                "path": "attributes[?contains(name, \u0027twitter\u0027)].uriValues[].uri"
+            },
+            {
+                "type": "JSON",
+                "header": "Youtube Channel URL",
+                "path": "attributes[?contains(name, \u0027youtube\u0027)].uriValues[].uri"
+            },
+            {
+                "type": "JSON",
+                "header": "Service Area Place Names",
+                "path": "serviceArea.places.placeInfos[].placeName"
+            },
+            {
+                "type": "JSON",
+                "header": "Service Area Place IDs",
+                "path": "serviceArea.places.placeInfos[].placeId"
             }
         ]
     },
@@ -6843,6 +6888,61 @@
             "field": "googleCid",
             "header": "Google CID",
             "subfieldPath": []
+        },
+        {
+            "field": "facebookPageUrl",
+            "header": "Facebook Page URL",
+            "subfieldPath": []
+        },
+        {
+            "field": "instagramHandle",
+            "header": "Instagram Handle",
+            "subfieldPath": []
+        },
+        {
+            "field": "linkedInUrl",
+            "header": "Linkedin URL",
+            "subfieldPath": []
+        },
+        {
+            "field": "pinterestUrl",
+            "header": "Pinterest URL",
+            "subfieldPath": []
+        },
+        {
+            "field": "tikTokUrl",
+            "header": "TikTok URL",
+            "subfieldPath": []
+        },
+        {
+            "field": "twitterHandle",
+            "header": "X Handle",
+            "subfieldPath": []
+        },
+        {
+            "field": "youTubeChannelUrl",
+            "header": "Youtube Channel URL",
+            "subfieldPath": []
+        },
+        {
+            "field": "serviceAreaPlaces",
+            "header": "Service Area Place Names",
+            "listSettings": "REPLACE_EXISTING",
+            "subfieldPath": [
+                {
+                  "name": "name"
+                }
+            ]
+        },
+        {
+            "field": "serviceAreaPlaces",
+            "header": "Service Area Place IDs",
+            "listSettings": "REPLACE_EXISTING",
+            "subfieldPath": [
+                {
+                  "name": "googlePlaceId"
+                }
+            ]
         }
     ],
     "comprehensiveModeConfig": {

@@ -3252,8 +3252,7 @@ export function gcidToYextCategories(gcidList: string) {
         "gcid:home_hairdresser":"2113",
         "gcid:beverage_distributor":"1114",
         "gcid:sports_equipment_rental_service":"1465",
-        "gcid:houseboat":"1639",
-        "gcid:tire_service": "532"
+        "gcid:houseboat":"1639"
     };
 
     var list = gcidList.split(',')
